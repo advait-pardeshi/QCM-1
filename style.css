@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+*,
+::before,
+::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  margin: 0;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+section {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+      grid-template-areas: "event-1 ." ". event-2" "event-3 ." ". event-4" "event-5 .";
+}
+
+.event-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: event-1;
+}
+
+.event-2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: event-2;
+  margin-top: 2rem;
+}
+
+.event-3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: event-3;
+}
+
+.event-4 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: event-4;
+}
+
+.event-5 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: event-5;
+}
+
+section {
+  width: 100vw;
+  background-color: #c8b8f1;
+  color: #f9f9f9;
+}
+
+.img {
+  width: 410px;
+  height: 230px;
+  margin-left: 3rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.event-1 {
+  margin-top: 3.5rem;
+}
+
+.event-1 .img {
+  background-image: url("Img/abhigyan.jpeg");
+  position: relative;
+}
+
+.event-1 .img .content {
+  color: #333232;
+  position: absolute;
+  width: 145px;
+  left: -80px;
+  bottom: 0px;
+  -webkit-transform: translateZ(30px);
+          transform: translateZ(30px);
+}
+
+.event-1 .img .content > p {
+  font-size: 30px;
+}
+
+.event-1 .img .divider {
+  width: 100%;
+  height: 4px;
+  margin: 0.5rem 0;
+  background-color: #363636;
+}
+
+.event-1 .img .count-no p:nth-of-type(2) {
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+.event-2 .img {
+  background-image: url("Img/manthan.jpg");
+}
+
+.event-3 .img {
+  background-image: url("Img/quizzotica.jpg");
+}
+
+.event-4 .img {
+  background-image: url("Img/tqqm.jpg");
+}
+
+.event-5 .img {
+  background-image: url("Img/vihaan.jpg");
+}
+
+.event-1,
+.event-3,
+.event-5 {
+  margin-left: 5rem;
+}
+
+.hover-effect {
+  margin: 0 auto;
+  -webkit-transition: -webkit-box-shadow 0.1s, -webkit-transform 0.1s;
+  transition: -webkit-box-shadow 0.1s, -webkit-transform 0.1s;
+  transition: box-shadow 0.1s, transform 0.1s;
+  transition: box-shadow 0.1s, transform 0.1s, -webkit-box-shadow 0.1s, -webkit-transform 0.1s;
+}
+
+.hover-effect:hover {
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 426px) {
+  section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section > div {
+    margin: 1.5rem 0;
+  }
+  .img {
+    width: 60vw;
+    height: calc(60vw * 0.65);
+  }
+  .event-1,
+  .event-3,
+  .event-5 {
+    margin-left: 0;
+  }
+  .event-2 {
+    margin-top: 1.5rem;
+  }
+  .content {
+    width: 5rem !important;
+    left: -45px !important;
+    bottom: -2px !important;
+  }
+  .content > p {
+    font-size: 1.125rem !important;
+  }
+  .content .divider {
+    margin: 3px 0 !important;
+    height: 3px !important;
+  }
+  .content .count-no p:nth-of-type(2) {
+    font-size: 12px !important;
+    font-weight: bolder;
+  }
+}
+/*# sourceMappingURL=style.css.map */
