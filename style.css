@@ -145,7 +145,7 @@ section {
   cursor: pointer;
 }
 
-@media screen and (max-width: 426px) {
+@media screen and (max-width: 700px) {
   section {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -165,7 +165,7 @@ section {
     margin: 1.5rem 0;
   }
   .img {
-    width: 60vw;
+    width: 70vw;
     height: calc(60vw * 0.65);
   }
   .event-1,
@@ -182,7 +182,7 @@ section {
     bottom: -2px !important;
   }
   .content > p {
-    font-size: 1.125rem !important;
+    font-size: 1.255rem !important;
   }
   .content .divider {
     margin: 3px 0 !important;
