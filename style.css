@@ -80,31 +80,42 @@ section {
 
 .event-1 .img {
   background-image: url("Img/abhigyan.jpeg");
-  position: relative;
 }
 
-.event-1 .img .content {
+.img {
+  position: relative;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.img .content {
   color: #333232;
   position: absolute;
   width: 145px;
-  left: -80px;
+  left: -65px;
   bottom: 0px;
-  -webkit-transform: translateZ(30px);
-          transform: translateZ(30px);
+  -webkit-transform: translateZ(35px);
+          transform: translateZ(35px);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-perspective: 100px;
+          perspective: 100px;
 }
 
-.event-1 .img .content > p {
+.img .content > p {
   font-size: 30px;
 }
 
-.event-1 .img .divider {
+.img .divider {
   width: 100%;
   height: 4px;
   margin: 0.5rem 0;
   background-color: #363636;
 }
 
-.event-1 .img .count-no p:nth-of-type(2) {
+.img .count-no p:nth-of-type(2) {
   font-size: 12px;
   font-weight: bolder;
 }
