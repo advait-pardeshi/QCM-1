@@ -23,6 +23,13 @@ body {
   overflow-x: hidden;
 }
 
+.scroll-down{
+  height: 100vh;
+  width: 100vw;
+  font-size: 5rem;
+  @include flexCentre();
+}
+
 //Layout
 section {
   display: grid;
@@ -172,16 +179,17 @@ section {
 
   .content {
     width: 5rem !important;
-    left: -45px !important;
+    left: -35px !important;
     bottom: -2px !important;
+   
 
     & > p {
-      font-size: 1.255rem !important;
+      font-size: 1.155rem !important;
     }
 
     .divider {
       margin: 3px 0 !important;
-      height: 3px !important;
+      height: 2.5px !important;
     }
 
     .count-no {

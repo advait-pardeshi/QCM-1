@@ -15,6 +15,21 @@ body {
   overflow-x: hidden;
 }
 
+.scroll-down {
+  height: 100vh;
+  width: 100vw;
+  font-size: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 section {
   display: -ms-grid;
   display: grid;
@@ -189,15 +204,15 @@ section {
   }
   .content {
     width: 5rem !important;
-    left: -45px !important;
+    left: -35px !important;
     bottom: -2px !important;
   }
   .content > p {
-    font-size: 1.255rem !important;
+    font-size: 1.155rem !important;
   }
   .content .divider {
     margin: 3px 0 !important;
-    height: 3px !important;
+    height: 2.5px !important;
   }
   .content .count-no p:nth-of-type(2) {
     font-size: 12px !important;
