@@ -23,7 +23,7 @@ body {
   overflow-x: hidden;
 }
 
-.scroll-down{
+.scroll-down {
   height: 100vh;
   width: 100vw;
   font-size: 5rem;
@@ -67,6 +67,7 @@ section {
   width: 100vw;
   background-color: $col-primary-backgr;
   color: #f9f9f9;
+  position: relative;
 }
 
 .img {
@@ -123,8 +124,11 @@ section {
   }
 }
 
-.event-2 .img {
-  background-image: url("Img/manthan.jpg");
+.event-2 {
+  position: relative;
+  .img {
+    background-image: url("Img/manthan.jpg");
+  }
 }
 .event-3 .img {
   background-image: url("Img/quizzotica.jpg");
@@ -152,6 +156,66 @@ section {
   cursor: pointer;
 }
 
+//! SLIDE EFFECT OVER IMAGE
+
+.slide-effect-0,
+.slide-effect-1,
+.slide-effect-2,
+.slide-effect-3,
+.slide-effect-4 {
+  height: 100%;
+  width: 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #6e6d6d;
+  transition: all linear;
+  // z-index: 19;
+}
+
+//! SIDE BACKGROUND
+
+.slide-section {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  transform: translateX(-100%);
+  transition: all linear;
+  z-index: 2;
+
+  background-image: linear-gradient(
+    45deg,
+    #ff9a9e 0%,
+    #fad0c4 99%,
+    #fad0c4 100%
+  );
+}
+
+// SLIDE OVER EVENT NAME
+.slider-event-name-0,
+.slider-event-name-1,
+.slider-event-name-2,
+.slider-event-name-3,
+.slider-event-name-4 {
+  position: absolute;
+  width: 0%;
+  height: 50px;
+  background-color: #ff9a9e;
+}
+
+.slide-effectNumber-0,
+.slide-effectNumber-1,
+.slide-effectNumber-2,
+.slide-effectNumber-3,
+.slide-effectNumber-4 {
+  background-color: rgb(171, 81, 255);
+  position: absolute;
+  right: 0;
+  width: -0%;
+  height: 30px;
+}
+
+//! MEDIA QUERY
 @media screen and (max-width: 700px) {
   section {
     @include flexCentre();
@@ -181,7 +245,6 @@ section {
     width: 5rem !important;
     left: -35px !important;
     bottom: -2px !important;
-   
 
     & > p {
       font-size: 1.155rem !important;

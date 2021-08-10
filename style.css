@@ -78,6 +78,7 @@ section {
   width: 100vw;
   background-color: #c8b8f1;
   color: #f9f9f9;
+  position: relative;
 }
 
 .img {
@@ -135,6 +136,10 @@ section {
   font-weight: bolder;
 }
 
+.event-2 {
+  position: relative;
+}
+
 .event-2 .img {
   background-image: url("Img/manthan.jpg");
 }
@@ -169,6 +174,56 @@ section {
   -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
           box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
   cursor: pointer;
+}
+
+.slide-effect-0,
+.slide-effect-1,
+.slide-effect-2,
+.slide-effect-3,
+.slide-effect-4 {
+  height: 100%;
+  width: 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #6e6d6d;
+  -webkit-transition: all linear;
+  transition: all linear;
+}
+
+.slide-section {
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: all linear;
+  transition: all linear;
+  z-index: 2;
+  background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+}
+
+.slider-event-name-0,
+.slider-event-name-1,
+.slider-event-name-2,
+.slider-event-name-3,
+.slider-event-name-4 {
+  position: absolute;
+  width: 0%;
+  height: 50px;
+  background-color: #ff9a9e;
+}
+
+.slide-effectNumber-0,
+.slide-effectNumber-1,
+.slide-effectNumber-2,
+.slide-effectNumber-3,
+.slide-effectNumber-4 {
+  background-color: #ab51ff;
+  position: absolute;
+  right: 0;
+  width: -0%;
+  height: 30px;
 }
 
 @media screen and (max-width: 700px) {

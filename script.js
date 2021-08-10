@@ -1,41 +1,82 @@
- AOS.init({
-     offset: 140,
-     duration: 600,
- });
+// AOS libery for scroll animation
+AOS.init({
+  offset: 140,
+  duration: 600,
+});
 
- let e = document.querySelectorAll('.hover-effect')
+let e = document.querySelectorAll(".hover-effect");
 
- e.forEach((el) => {
-     const height = el.clientHeight
-     const width = el.clientWidth
+e.forEach((el) => {
+  const height = el.clientHeight;
+  const width = el.clientWidth;
+
+  el.addEventListener("mousemove", handleMove);
+
+  function handleMove(e) {
+    const xVal = e.layerX;
+    const yVal = e.layerY;
+
+    const yRotation = 20 * ((xVal - width / 2) / width);
+
+    const xRotation = -20 * ((yVal - height / 2) / height);
+
+    const string =
+      "perspective(500px) scale(1.1) rotateX(" +
+      xRotation +
+      "deg) rotateY(" +
+      yRotation +
+      "deg)";
+
+    el.style.transform = string;
+  }
+
+  el.addEventListener("mouseout", function () {
+    el.style.transform = "perspective(500px) scale(1) rotateX(0) rotateY(0)";
+  });
+
+  el.addEventListener("mousedown", function () {
+    el.style.transform = "perspective(500px) scale(0.9) rotateX(0) rotateY(0)";
+  });
+
+  el.addEventListener("mouseup", function () {
+    el.style.transform = "perspective(500px) scale(1.1) rotateX(0) rotateY(0)";
+  });
+});
 
 
-     el.addEventListener('mousemove', handleMove)
 
-     function handleMove(e) {
-         const xVal = e.layerX
-         const yVal = e.layerY
+//! SLIDE Effect
+const imgs = document.querySelectorAll(".img");
 
 
-         const yRotation = 20 * ((xVal - width / 2) / width)
+// GSAP
+var tl = gsap.timeline({
+  paused: true
+});
 
-         const xRotation = -20 * ((yVal - height / 2) / height)
 
-         const string = 'perspective(500px) scale(1.1) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)'
 
-         el.style.transform = string
-     }
 
-     el.addEventListener('mouseout', function () {
-         el.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)'
-     })
+imgs.forEach((img, idx) => {
+  img.addEventListener("click", () => {
+  
+  
 
-     el.addEventListener('mousedown', function () {
-         el.style.transform = 'perspective(500px) scale(0.9) rotateX(0) rotateY(0)'
-     })
+    tl.to('.slide-effect-' + idx, 0.3, {
+      width: '100%'
+    })
+    .to('.slider-event-name-'+ idx,0.3,{
+      width: '100%'
+    },'-=0.3')
+    .to('.slide-effectNumber-'+idx,0.3,{
+      width: '100%'
+    },'-=0.3')
+    .to('.slide-section', 0.5, {
+      x: '0',
+      ease: Power2.easeOut,
 
-     el.addEventListener('mouseup', function () {
-         el.style.transform = 'perspective(500px) scale(1.1) rotateX(0) rotateY(0)'
-     })
+    })
+    tl.play()
+  });
 
- })
+});
