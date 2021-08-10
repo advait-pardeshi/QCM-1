@@ -168,7 +168,7 @@ section {
   position: absolute;
   right: 0;
   bottom: 0;
-  background-color: #6e6d6d;
+  background-color: #949494;
   transition: all linear;
   // z-index: 19;
 }
@@ -211,7 +211,7 @@ section {
   background-color: rgb(171, 81, 255);
   position: absolute;
   right: 0;
-  width: -0%;
+  width: 0%;
   height: 30px;
 }
 
@@ -265,4 +265,24 @@ section {
       }
     }
   }
+
+  //SLIDE SECCTION
+.slider-event-name-0,
+.slider-event-name-1,
+.slider-event-name-2,
+.slider-event-name-3,
+.slider-event-name-4 {
+
+  height: 30px;
+}
+
+.slide-effectNumber-0,
+.slide-effectNumber-1,
+.slide-effectNumber-2,
+.slide-effectNumber-3,
+.slide-effectNumber-4 {
+  
+
+  height: 30px;
+}
 }
