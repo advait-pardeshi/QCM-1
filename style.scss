@@ -175,20 +175,57 @@ section {
 
 //! SIDE BACKGROUND
 
-.slide-section {
-  position: absolute;
+.slider-container-0 {
   width: 100vw;
   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   transform: translateX(-100%);
-  transition: all linear;
+  background-color: black;
   z-index: 2;
+  display: flex;
+  justify-content: center;
+}
 
-  background-image: linear-gradient(
-    45deg,
-    #ff9a9e 0%,
-    #fad0c4 99%,
-    #fad0c4 100%
-  );
+.slide-img {
+  width: 48%;
+  height: 80vh;
+  background-image: url("Img/abhigyan.jpeg");
+  background-position: center;
+  background-size: cover;
+  padding-left: 2rem;
+  margin-top: 6.5rem;
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.slide-content {
+  width: 48%;
+  height: 80vh;
+  margin-top: 6.5rem;
+  color: #fff;
+  padding-left: 3rem;
+  font-size: 30px !important;
+  transform: translateX(200vw);
+  opacity: 0;
+  // display: none;
+  // display: block;
+}
+
+.btn-0 {
+  position: absolute;
+  right: 50px;
+  top: 20px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: lighter;
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.btn:hover {
+  cursor: pointer;
 }
 
 // SLIDE OVER EVENT NAME
@@ -216,12 +253,12 @@ section {
 }
 
 //! MEDIA QUERY
-@media screen and (max-width: 700px) {
+@media (max-width: 700px) {
   section {
     @include flexCentre();
     flex-direction: column;
 
-    & > div {
+    & > div:not(.slider-container-0){
       margin: 1.5rem 0;
     }
   }
@@ -266,23 +303,39 @@ section {
     }
   }
 
-  //SLIDE SECCTION
-.slider-event-name-0,
-.slider-event-name-1,
-.slider-event-name-2,
-.slider-event-name-3,
-.slider-event-name-4 {
+  //! SLIDE FULL EVENT DETAIL SEC
+  .slider-container-0 {
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    top: 0;
+  }
+  .slide-img {
+    width: 90% !important;
+    height: 50vh;
+    padding-left: 1rem;
+    margin-top: 6.5rem !important;
+  }
 
-  height: 30px;
-}
+  .slide-content {
+    width: 90% !important;
+    font-size: 20px;
+  }
 
-.slide-effectNumber-0,
-.slide-effectNumber-1,
-.slide-effectNumber-2,
-.slide-effectNumber-3,
-.slide-effectNumber-4 {
-  
+  //! SLIDE SECCTION
+  .slider-event-name-0,
+  .slider-event-name-1,
+  .slider-event-name-2,
+  .slider-event-name-3,
+  .slider-event-name-4 {
+    height: 30px;
+  }
 
-  height: 30px;
-}
+  .slide-effectNumber-0,
+  .slide-effectNumber-1,
+  .slide-effectNumber-2,
+  .slide-effectNumber-3,
+  .slide-effectNumber-4 {
+    height: 30px;
+  }
 }
