@@ -80,30 +80,101 @@ btn0.addEventListener('click', () => {
 })
 
 
-// const btn1 = document.querySelector(".btn-0");
-// btn0.addEventListener('click', () => {
-//   tlr1.to('.btn-1', 0.2, {
-//       x: '-100%',
-//       opacity: 0,
-//     })
-//     .to('.slide-content-1', 0.3, {
-//       x: '200vw',
-//       opacity: 0,
-//       ease: Power2.easeOut
-//     })
-//     .to('.slide-img', 0.3, {
-//       x: '-100%',
-//       opacity: 0,
-//     })
-//     .to('.slider-container-0', 0.4, {
-//       x: '-100%',
-//       ease: Power2.easeOut,
-//     })
+const btn1 = document.querySelector(".btn-1");
+btn1.addEventListener('click', () => {
+  tlr1.to('.btn-1', 0.2, {
+      x: '-100%',
+      opacity: 0,
+    })
+    .to('.slide-content-1', 0.3, {
+      x: '200vw',
+      opacity: 0,
+      ease: Power2.easeOut
+    })
+    .to('.slide-img-1', 0.3, {
+      x: '-100%',
+      opacity: 0,
+    })
+    .to('.slider-container-1', 0.4, {
+      x: '-100%',
+      ease: Power2.easeOut,
+    })
 
-//   tl1.reverse()
-//   tlr1.play()
-// })
+  tl1.reverse()
+  tlr1.play()
+})
 
+const btn2 = document.querySelector(".btn-2");
+btn2.addEventListener('click', () => {
+  tlr2.to('.btn-2', 0.2, {
+      x: '-100%',
+      opacity: 0,
+    })
+    .to('.slide-content-2', 0.3, {
+      x: '200vw',
+      opacity: 0,
+      ease: Power2.easeOut
+    })
+    .to('.slide-img-2', 0.3, {
+      x: '-100%',
+      opacity: 0,
+    })
+    .to('.slider-container-2', 0.4, {
+      x: '-100%',
+      ease: Power2.easeOut,
+    })
+
+  tl2.reverse()
+  tlr2.play()
+})
+
+const btn3 = document.querySelector(".btn-3");
+btn3.addEventListener('click', () => {
+  tlr3.to('.btn-3', 0.2, {
+      x: '-100%',
+      opacity: 0,
+    })
+    .to('.slide-content-3', 0.3, {
+      x: '200vw',
+      opacity: 0,
+      ease: Power2.easeOut
+    })
+    .to('.slide-img-3', 0.3, {
+      x: '-100%',
+      opacity: 0,
+    })
+    .to('.slider-container-3', 0.4, {
+      x: '-100%',
+      ease: Power2.easeOut,
+    })
+
+  tl3.reverse()
+  tlr3.play()
+})
+
+const btn4 = document.querySelector(".btn-4");
+btn4.addEventListener('click', () => {
+  tlr4.to('.btn-4', 0.2, {
+      x: '-100%',
+      opacity: 0,
+    })
+    .to('.slide-content-4', 0.3, {
+      x: '200vw',
+      opacity: 0,
+      ease: Power2.easeOut
+    })
+    .to('.slide-img-4', 0.3, {
+      x: '-100%',
+      opacity: 0,
+    })
+    .to('.slider-container-4', 0.4, {
+      x: '-100%',
+      ease: Power2.easeOut,
+    })
+
+  tl4.reverse()
+  tlr4.play()
+})
 
 // GSAP
 //! Timeline for slide animation over evemt img
@@ -152,7 +223,15 @@ var tlr0 = gsap.timeline({
 var tlr1 = gsap.timeline({
   paused: true
 });
-
+var tlr2 = gsap.timeline({
+  paused: true
+});
+var tlr3 = gsap.timeline({
+  paused: true
+});
+var tlr4 = gsap.timeline({
+  paused: true
+});
 
 
 event1.addEventListener('click', () => {
@@ -190,20 +269,39 @@ event1.addEventListener('click', () => {
 
 
 event2.addEventListener('click', () => {
-   tl1.to('.slide-effect-1', 0.3, {
-       width: '100%'
-     })
-     .to('.slider-event-name-1', 0.3, {
-       width: '100%'
-     }, '-=0.3')
-     .to('.slide-effectNumber-1', 0.3, {
-       width: '100%'
-     }, '-=0.3')
+  tl1.to('.slide-effect-1', 0.3, {
+      width: '100%'
+    })
+    .to('.slider-event-name-1', 0.3, {
+      width: '100%'
+    }, '-=0.3')
+    .to('.slide-effectNumber-1', 0.3, {
+      width: '100%'
+    }, '-=0.3')
+  tls1.to('.slider-container-1', 0.5, {
+      x: '0',
+      ease: Power2.easeOut,
+    }, '+=0.3')
+    .to('.slide-img-1', 0.3, {
+      x: '0',
+      opacity: 1,
+    })
+    .to('.slide-content-1', 0.3, {
+      x: '0',
+      opacity: 1,
+    })
+    .to('.btn-1', 0.2, {
+      x: '0',
+      opacity: 1,
+    })
 
-   
 
-   tl1.play()
-  //  tls1.play()
+  tl1.play()
+  tls1.play()
+
+  setTimeout(() => {
+    document.querySelector('.our-events').scrollIntoView(true)
+  }, 300)
 })
 
 
@@ -218,8 +316,28 @@ event3.addEventListener('click', () => {
     .to('.slide-effectNumber-2', 0.3, {
       width: '100%'
     }, '-=0.3')
-
+  tls2.to('.slider-container-2', 0.5, {
+      x: '0',
+      ease: Power2.easeOut,
+    }, '+=0.3')
+    .to('.slide-img-2', 0.3, {
+      x: '0',
+      opacity: 1,
+    })
+    .to('.slide-content-2', 0.3, {
+      x: '0',
+      opacity: 1,
+    })
+    .to('.btn-2', 0.2, {
+      x: '0',
+      opacity: 1,
+    })
   tl2.play()
+  tls2.play()
+
+  setTimeout(() => {
+    document.querySelector('.our-events').scrollIntoView(true)
+  }, 300)
 })
 
 event4.addEventListener('click', () => {
@@ -232,8 +350,28 @@ event4.addEventListener('click', () => {
     .to('.slide-effectNumber-3', 0.3, {
       width: '100%'
     }, '-=0.3')
-
+  tls3.to('.slider-container-3', 0.5, {
+      x: '0',
+      ease: Power2.easeOut,
+    }, '+=0.3')
+    .to('.slide-img-3', 0.3, {
+      x: '0',
+      opacity: 1,
+    })
+    .to('.slide-content-3', 0.3, {
+      x: '0',
+      opacity: 1,
+    })
+    .to('.btn-3', 0.2, {
+      x: '0',
+      opacity: 1,
+    })
   tl3.play()
+  tls3.play()
+
+  setTimeout(() => {
+    document.querySelector('.our-events').scrollIntoView(true)
+  }, 300)
 })
 
 event5.addEventListener('click', () => {
@@ -247,5 +385,27 @@ event5.addEventListener('click', () => {
       width: '100%'
     }, '-=0.3')
 
+  tls4.to('.slider-container-4', 0.5, {
+      x: '0',
+      ease: Power2.easeOut,
+    }, '+=0.3')
+    .to('.slide-img-4', 0.3, {
+      x: '0',
+      opacity: 1,
+    })
+    .to('.slide-content-4', 0.3, {
+      x: '0',
+      opacity: 1,
+    })
+    .to('.btn-4', 0.2, {
+      x: '0',
+      opacity: 1,
+    })
   tl4.play()
+  tls4.play()
+
+  setTimeout(() => {
+    document.querySelector('.our-events').scrollIntoView(true)
+  },300)
+  
 })

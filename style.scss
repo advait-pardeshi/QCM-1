@@ -175,7 +175,7 @@ section {
 
 //! SIDE BACKGROUND
 
-.slider-container-0 {
+.slider-container-0,.slider_container {
   width: 100vw;
   height: 100%;
   position: absolute;
@@ -188,7 +188,7 @@ section {
   justify-content: center;
 }
 
-.slide-img {
+.slide-img,.slide-img-1{
   width: 48%;
   height: 80vh;
   background-image: url("Img/abhigyan.jpeg");
@@ -199,8 +199,24 @@ section {
   transform: translateX(-100%);
   opacity: 0;
 }
+.slide-img-1{
+  background-image: url('Img/manthan.jpg');
+}
 
-.slide-content {
+.slide-img-2{
+  background-image: url('Img/quizzotica.jpg');
+}
+
+.slide-img-3{
+  background-image: url('Img/tqqm.jpg');
+}
+
+.slide-img-4{
+  background-image: url("Img/vihaan.jpg");
+}
+
+
+.slide-content,.slide-content-1,.slide-content-2,.slide-content-3,.slide-content-4{
   width: 48%;
   height: 80vh;
   margin-top: 6.5rem;
@@ -209,11 +225,9 @@ section {
   font-size: 30px !important;
   transform: translateX(200vw);
   opacity: 0;
-  // display: none;
-  // display: block;
 }
 
-.btn-0 {
+.btn-0,.btn-1,.btn-2,.btn-3,.btn-4 {
   position: absolute;
   right: 50px;
   top: 20px;
@@ -258,7 +272,7 @@ section {
     @include flexCentre();
     flex-direction: column;
 
-    & > div:not(.slider-container-0){
+    & > div:not(.slider-container-0,.slider_container){
       margin: 1.5rem 0;
     }
   }
@@ -304,11 +318,12 @@ section {
   }
 
   //! SLIDE FULL EVENT DETAIL SEC
-  .slider-container-0 {
+  .slider-container-0,.slider_container{
     flex-direction: column;
     align-items: center;
     justify-content: start;
     top: 0;
+    margin-top: 0;
   }
   .slide-img {
     width: 90% !important;
@@ -317,9 +332,9 @@ section {
     margin-top: 6.5rem !important;
   }
 
-  .slide-content {
+  .slide-content,.slide-content-1,.slide-content-2,.slide-content-3,.slide-content-4 {
     width: 90% !important;
-    font-size: 20px;
+    font-size: 15px;
   }
 
   //! SLIDE SECCTION
