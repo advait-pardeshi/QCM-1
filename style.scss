@@ -5,7 +5,7 @@
   justify-content: center;
 }
 
-$col-primary-backgr: #c8b8f1;
+$col-primary-backgr: #000000;
 
 *,
 ::before,
@@ -36,14 +36,14 @@ section {
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr ;
   gap: 0px 0px;
   grid-template-areas:
     "event-1 ."
     ". event-2"
     "event-3 ."
     ". event-4"
-    "event-5 .";
+
 }
 .event-1 {
   grid-area: event-1;
@@ -58,14 +58,12 @@ section {
 .event-4 {
   grid-area: event-4;
 }
-.event-5 {
-  grid-area: event-5;
-}
+
 
 section {
   // margin-top: 2rem;
   width: 100vw;
-  background-color: $col-primary-backgr;
+  background-color: black;
   color: #f9f9f9;
   position: relative;
 }
@@ -93,7 +91,7 @@ section {
   transform-style: preserve-3d;
 
   .content {
-    color: rgb(51, 50, 50);
+    color: rgb(255, 255, 255);
     position: absolute;
     width: 145px;
     left: -65px;
@@ -111,7 +109,7 @@ section {
     width: 100%;
     height: 4px;
     margin: 0.5rem 0;
-    background-color: rgb(54, 54, 54);
+    background-color: rgb(255, 255, 255);
   }
 
   .count-no {
@@ -168,7 +166,7 @@ section {
   position: absolute;
   right: 0;
   bottom: 0;
-  background-color: #949494;
+  background-color: #ffffff;
   transition: all linear;
   // z-index: 19;
 }
@@ -191,7 +189,7 @@ section {
 
 .slide-img,
 .slide-img-1 {
-  width: 48%;
+  width: 68%;
   height: 80vh;
   background-image: url("Img/abhigyan.jpeg");
   background-position: center;
@@ -213,21 +211,19 @@ section {
   background-image: url("Img/tqqm.jpg");
 }
 
-.slide-img-4 {
-  background-image: url("Img/vihaan.jpg");
-}
+
 
 .slide-content,
 .slide-content-1,
 .slide-content-2,
 .slide-content-3,
 .slide-content-4 {
-  width: 48%;
+  width: 28%;
   height: 80vh;
   margin-top: 6.5rem;
   color: #fff;
-  padding-left: 3rem;
-  font-size: 30px !important;
+  padding-left: 2rem;
+  font-size: 20px !important;
   transform: translateX(200vw);
   opacity: 0;
 }
@@ -260,7 +256,7 @@ section {
   position: absolute;
   width: 0%;
   height: 50px;
-  background-color: #ff9a9e;
+  background-color: #ffffff;
 }
 
 .slide-effectNumber-0,
@@ -268,7 +264,7 @@ section {
 .slide-effectNumber-2,
 .slide-effectNumber-3,
 .slide-effectNumber-4 {
-  background-color: rgb(171, 81, 255);
+  background-color: rgb(255, 255, 255);
   position: absolute;
   right: 0;
   width: 0%;

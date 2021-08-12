@@ -37,10 +37,10 @@ section {
   grid-auto-rows: 1fr;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 0px 0px;
-      grid-template-areas: "event-1 ." ". event-2" "event-3 ." ". event-4" "event-5 .";
+      grid-template-areas: "event-1 ." ". event-2" "event-3 ." ". event-4";
 }
 
 .event-1 {
@@ -68,15 +68,9 @@ section {
   grid-area: event-4;
 }
 
-.event-5 {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
-  grid-area: event-5;
-}
-
 section {
   width: 100vw;
-  background-color: #c8b8f1;
+  background-color: black;
   color: #f9f9f9;
   position: relative;
 }
@@ -107,7 +101,7 @@ section {
 }
 
 .img .content {
-  color: #333232;
+  color: white;
   position: absolute;
   width: 145px;
   left: -65px;
@@ -128,7 +122,7 @@ section {
   width: 100%;
   height: 4px;
   margin: 0.5rem 0;
-  background-color: #363636;
+  background-color: white;
 }
 
 .img .count-no p:nth-of-type(2) {
@@ -186,7 +180,7 @@ section {
   position: absolute;
   right: 0;
   bottom: 0;
-  background-color: #949494;
+  background-color: #ffffff;
   -webkit-transition: all linear;
   transition: all linear;
 }
@@ -212,7 +206,7 @@ section {
 
 .slide-img,
 .slide-img-1 {
-  width: 48%;
+  width: 68%;
   height: 80vh;
   background-image: url("Img/abhigyan.jpeg");
   background-position: center;
@@ -236,21 +230,17 @@ section {
   background-image: url("Img/tqqm.jpg");
 }
 
-.slide-img-4 {
-  background-image: url("Img/vihaan.jpg");
-}
-
 .slide-content,
 .slide-content-1,
 .slide-content-2,
 .slide-content-3,
 .slide-content-4 {
-  width: 48%;
+  width: 28%;
   height: 80vh;
   margin-top: 6.5rem;
   color: #fff;
-  padding-left: 3rem;
-  font-size: 30px !important;
+  padding-left: 2rem;
+  font-size: 20px !important;
   -webkit-transform: translateX(200vw);
           transform: translateX(200vw);
   opacity: 0;
@@ -284,7 +274,7 @@ section {
   position: absolute;
   width: 0%;
   height: 50px;
-  background-color: #ff9a9e;
+  background-color: #ffffff;
 }
 
 .slide-effectNumber-0,
@@ -292,7 +282,7 @@ section {
 .slide-effectNumber-2,
 .slide-effectNumber-3,
 .slide-effectNumber-4 {
-  background-color: #ab51ff;
+  background-color: white;
   position: absolute;
   right: 0;
   width: 0%;
