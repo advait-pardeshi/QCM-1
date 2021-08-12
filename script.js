@@ -252,6 +252,7 @@ event1.addEventListener('click', () => {
     .to('.slide-img', 0.3, {
       x: '0',
       opacity: 1,
+     
     })
     .to('.slide-content', 0.3, {
       x: '0',
