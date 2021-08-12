@@ -375,38 +375,3 @@ event4.addEventListener('click', () => {
   }, 300)
 })
 
-event5.addEventListener('click', () => {
-  tl4.to('.slide-effect-4', 0.3, {
-      width: '100%'
-    })
-    .to('.slider-event-name-4', 0.3, {
-      width: '100%'
-    }, '-=0.3')
-    .to('.slide-effectNumber-4', 0.3, {
-      width: '100%'
-    }, '-=0.3')
-
-  tls4.to('.slider-container-4', 0.5, {
-      x: '0',
-      ease: Power2.easeOut,
-    }, '+=0.3')
-    .to('.slide-img-4', 0.3, {
-      x: '0',
-      opacity: 1,
-    })
-    .to('.slide-content-4', 0.3, {
-      x: '0',
-      opacity: 1,
-    })
-    .to('.btn-4', 0.2, {
-      x: '0',
-      opacity: 1,
-    })
-  tl4.play()
-  tls4.play()
-
-  setTimeout(() => {
-    document.querySelector('.our-events').scrollIntoView(true)
-  },300)
-  
-})

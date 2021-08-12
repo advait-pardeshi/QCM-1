@@ -143,10 +143,6 @@ section {
 }
 
 .event-4 .img {
-  background-image: url("Img/tqqm.jpg");
-}
-
-.event-5 .img {
   background-image: url("Img/vihaan.jpg");
 }
 
@@ -227,7 +223,7 @@ section {
 }
 
 .slide-img-3 {
-  background-image: url("Img/tqqm.jpg");
+  background-image: url("Img/vihaan.jpg");
 }
 
 .slide-content,
@@ -240,7 +236,7 @@ section {
   margin-top: 6.5rem;
   color: #fff;
   padding-left: 2rem;
-  font-size: 20px !important;
+  font-size: 22px !important;
   -webkit-transform: translateX(200vw);
           transform: translateX(200vw);
   opacity: 0;
@@ -363,8 +359,9 @@ section {
   .slide-content-3,
   .slide-content-4 {
     width: 90% !important;
-    font-size: 22px !important;
+    font-size: 18px !important;
     padding-left: 0;
+    margin-top: 3rem;
   }
   .slider-event-name-0,
   .slider-event-name-1,
